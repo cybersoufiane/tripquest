@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanderlust Travel - Book Your Dream Adventure</title>
+    <title>TripQuest.cc - Exclusive Hotel Deals & Island Getaways</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -12,14 +12,14 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-plane"></i>
-                <span>Wanderlust</span>
+                <i class="fas fa-umbrella-beach"></i>
+                <span>TripQuest.cc</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#deals">Hotel Deals</a></li>
                 <li><a href="#booking">Book Now</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#destinations">Destinations</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -32,46 +32,350 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Discover Your Next Adventure</h1>
-            <p>Book unforgettable travel experiences around the world</p>
-            <a href="#booking" class="cta-button">Start Your Journey</a>
+        <div class="palm-trees">
+            <div class="palm-left"></div>
+            <div class="palm-right"></div>
         </div>
-        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Discover Paradise Hotels</h1>
+            <p>Unbeatable deals on luxury resorts and boutique hotels worldwide</p>
+            <a href="#booking" class="cta-button">Find Your Perfect Stay</a>
+        </div>
+        <div class="hero-waves">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+        </div>
     </section>
 
-    <!-- Quick Booking Form -->
+    <!-- Quick Hotel Search -->
     <section class="quick-booking">
         <div class="container">
             <div class="booking-form">
                 <div class="form-group">
-                    <label><i class="fas fa-map-marker-alt"></i> From</label>
-                    <input type="text" placeholder="Departure city">
+                    <label><i class="fas fa-map-marker-alt"></i> Destination</label>
+                    <input type="text" placeholder="Where do you want to stay?">
                 </div>
                 <div class="form-group">
-                    <label><i class="fas fa-map-marker-alt"></i> To</label>
-                    <input type="text" placeholder="Destination">
-                </div>
-                <div class="form-group">
-                    <label><i class="fas fa-calendar"></i> Departure</label>
+                    <label><i class="fas fa-calendar"></i> Check-in</label>
                     <input type="date">
                 </div>
                 <div class="form-group">
-                    <label><i class="fas fa-calendar"></i> Return</label>
+                    <label><i class="fas fa-calendar"></i> Check-out</label>
                     <input type="date">
                 </div>
                 <div class="form-group">
-                    <label><i class="fas fa-user"></i> Passengers</label>
+                    <label><i class="fas fa-users"></i> Guests</label>
                     <select>
-                        <option>1 Adult</option>
-                        <option>2 Adults</option>
-                        <option>3 Adults</option>
-                        <option>4+ Adults</option>
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4+ Guests</option>
                     </select>
                 </div>
                 <button class="search-btn">
-                    <i class="fas fa-search"></i> Search Flights
+                    <i class="fas fa-search"></i> Search Hotels
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Hotel Deals -->
+    <section id="deals" class="deals">
+        <div class="container">
+            <h2>🏨 Exclusive Hotel Deals</h2>
+            <div class="deals-grid">
+                <div class="deal-card featured">
+                    <div class="deal-badge">💎 LUXURY DEAL</div>
+                    <div class="card-image maldives"></div>
+                    <div class="card-content">
+                        <h3>Maldives Overwater Villa</h3>
+                        <p class="location">Four Seasons Resort Maldives</p>
+                        <p class="description">Private overwater villa with direct ocean access and sunset views</p>
+                        <div class="price-section">
+                            <span class="original-price">$899</span>
+                            <span class="deal-price">$599/night</span>
+                            <span class="savings">Save 33%</span>
+                        </div>
+                        <div class="deal-features">
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-utensils"></i> Breakfast Included</span>
+                            <span><i class="fas fa-swimming-pool"></i> Private Pool</span>
+                        </div>
+                        <button class="book-btn">Book This Deal</button>
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-badge">🌺 HOT DEAL</div>
+                    <div class="card-image bali-resort"></div>
+                    <div class="card-content">
+                        <h3>Bali Jungle Resort</h3>
+                        <p class="location">Ubud, Indonesia</p>
+                        <p class="description">Luxury eco-resort surrounded by tropical rainforest</p>
+                        <div class="price-section">
+                            <span class="original-price">$299</span>
+                            <span class="deal-price">$179/night</span>
+                            <span class="savings">Save 40%</span>
+                        </div>
+                        <div class="deal-features">
+                            <span><i class="fas fa-spa"></i> Spa Access</span>
+                            <span><i class="fas fa-leaf"></i> Eco-Friendly</span>
+                            <span><i class="fas fa-hiking"></i> Nature Tours</span>
+                        </div>
+                        <button class="book-btn">Book This Deal</button>
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-badge">🏖️ BEACH SPECIAL</div>
+                    <div class="card-image hawaii-resort"></div>
+                    <div class="card-content">
+                        <h3>Maui Beachfront Resort</h3>
+                        <p class="location">Wailea, Hawaii</p>
+                        <p class="description">Oceanfront suites with private beach access and sunset lanai</p>
+                        <div class="price-section">
+                            <span class="original-price">$649</span>
+                            <span class="deal-price">$429/night</span>
+                            <span class="savings">Save 34%</span>
+                        </div>
+                        <div class="deal-features">
+                            <span><i class="fas fa-cocktail"></i> Beach Bar</span>
+                            <span><i class="fas fa-water"></i> Water Sports</span>
+                            <span><i class="fas fa-parking"></i> Free Parking</span>
+                        </div>
+                        <button class="book-btn">Book This Deal</button>
+                    </div>
+                </div>
+                
+                <div class="deal-card">
+                    <div class="deal-badge">🌴 LIMITED TIME</div>
+                    <div class="card-image caribbean"></div>
+                    <div class="card-content">
+                        <h3>Caribbean All-Inclusive</h3>
+                        <p class="location">Turks & Caicos</p>
+                        <p class="description">All-inclusive beachfront resort with unlimited dining and drinks</p>
+                        <div class="price-section">
+                            <span class="original-price">$549</span>
+                            <span class="deal-price">$349/night</span>
+                            <span class="savings">Save 36%</span>
+                        </div>
+                        <div class="deal-features">
+                            <span><i class="fas fa-glass-cheers"></i> All Inclusive</span>
+                            <span><i class="fas fa-music"></i> Live Music</span>
+                            <span><i class="fas fa-dumbbell"></i> Fitness Center</span>
+                        </div>
+                        <button class="book-btn">Book This Deal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose TripQuest -->
+    <section class="features">
+        <div class="container">
+            <h2>Why TripQuest.cc?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-tags"></i>
+                    <h3>Exclusive Deals</h3>
+                    <p>Access to private hotel rates and exclusive discounts up to 60% off</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-check"></i>
+                    <h3>Best Price Guarantee</h3>
+                    <p>Find a lower price elsewhere? We'll match it and give you an extra 5% off</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Island Support</h3>
+                    <p>Our travel concierge team is available around the clock to help you</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-heart"></i>
+                    <h3>Handpicked Hotels</h3>
+                    <p>Every property is personally selected for quality, location, and value</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2>Find Your Perfect Hotel</h2>
+            <div class="booking-tabs">
+                <button class="tab-btn active" data-tab="hotels">🏨 Hotels</button>
+                <button class="tab-btn" data-tab="resorts">🏖️ Resorts</button>
+                <button class="tab-btn" data-tab="villas">🏡 Villas</button>
+            </div>
+            
+            <div class="tab-content active" id="hotels">
+                <form class="detailed-booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>🏝️ Destination</label>
+                            <input type="text" placeholder="City, country, or hotel name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>💰 Budget Range</label>
+                            <select required>
+                                <option value="">Select budget</option>
+                                <option value="budget">Budget ($50-150/night)</option>
+                                <option value="mid">Mid-range ($150-350/night)</option>
+                                <option value="luxury">Luxury ($350-600/night)</option>
+                                <option value="ultra">Ultra-luxury ($600+/night)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>📅 Check-in Date</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>📅 Check-out Date</label>
+                            <input type="date" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>👥 Guests</label>
+                            <select required>
+                                <option value="">Number of guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5+ Guests</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>🛏️ Rooms</label>
+                            <select required>
+                                <option value="">Number of rooms</option>
+                                <option value="1">1 Room</option>
+                                <option value="2">2 Rooms</option>
+                                <option value="3">3 Rooms</option>
+                                <option value="4">4+ Rooms</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">🔍 Search Hotels</button>
+                </form>
+            </div>
+            
+            <div class="tab-content" id="resorts">
+                <form class="detailed-booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>🏖️ Resort Location</label>
+                            <input type="text" placeholder="Beach destination or resort name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>🌟 Resort Type</label>
+                            <select required>
+                                <option value="">Select resort type</option>
+                                <option value="all-inclusive">All-Inclusive</option>
+                                <option value="adults-only">Adults Only</option>
+                                <option value="family">Family Friendly</option>
+                                <option value="spa">Spa Resort</option>
+                                <option value="golf">Golf Resort</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>📅 Check-in Date</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>📅 Check-out Date</label>
+                            <input type="date" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>👥 Guests</label>
+                            <select required>
+                                <option value="">Number of guests</option>
+                                <option value="2">2 Adults</option>
+                                <option value="3">2 Adults + 1 Child</option>
+                                <option value="4">2 Adults + 2 Children</option>
+                                <option value="family">Large Family (5+)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>💰 Budget per Night</label>
+                            <select required>
+                                <option value="">Select budget</option>
+                                <option value="moderate">$200-400/night</option>
+                                <option value="upscale">$400-700/night</option>
+                                <option value="luxury">$700-1200/night</option>
+                                <option value="ultra">$1200+/night</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">🏖️ Find Resorts</button>
+                </form>
+            </div>
+            
+            <div class="tab-content" id="villas">
+                <form class="detailed-booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>🏡 Villa Location</label>
+                            <input type="text" placeholder="City, island, or region" required>
+                        </div>
+                        <div class="form-group">
+                            <label>🏠 Villa Type</label>
+                            <select required>
+                                <option value="">Select villa type</option>
+                                <option value="beachfront">Beachfront Villa</option>
+                                <option value="mountain">Mountain Villa</option>
+                                <option value="private-pool">Private Pool Villa</option>
+                                <option value="overwater">Overwater Villa</option>
+                                <option value="luxury-estate">Luxury Estate</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>📅 Check-in Date</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>📅 Check-out Date</label>
+                            <input type="date" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>🛏️ Bedrooms</label>
+                            <select required>
+                                <option value="">Number of bedrooms</option>
+                                <option value="1">1 Bedroom</option>
+                                <option value="2">2 Bedrooms</option>
+                                <option value="3">3 Bedrooms</option>
+                                <option value="4">4 Bedrooms</option>
+                                <option value="5">5+ Bedrooms</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>👥 Total Guests</label>
+                            <select required>
+                                <option value="">Number of guests</option>
+                                <option value="2">2 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="6">6 Guests</option>
+                                <option value="8">8 Guests</option>
+                                <option value="10">10+ Guests</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">🏡 Search Villas</button>
+                </form>
             </div>
         </div>
     </section>
@@ -79,205 +383,44 @@
     <!-- Popular Destinations -->
     <section id="destinations" class="destinations">
         <div class="container">
-            <h2>Popular Destinations</h2>
+            <h2>🌴 Popular Island Destinations</h2>
             <div class="destinations-grid">
                 <div class="destination-card">
-                    <div class="card-image paris"></div>
+                    <div class="card-image maldives-dest"></div>
                     <div class="card-content">
-                        <h3>Paris, France</h3>
-                        <p>The City of Light awaits with iconic landmarks and romantic charm</p>
-                        <div class="price">From $699</div>
-                        <button class="book-btn">Book Now</button>
+                        <h3>🇲🇻 Maldives</h3>
+                        <p>Crystal clear waters and overwater bungalows in paradise</p>
+                        <div class="price">Hotels from $199/night</div>
+                        <button class="book-btn">Explore Deals</button>
                     </div>
                 </div>
                 <div class="destination-card">
-                    <div class="card-image tokyo"></div>
+                    <div class="card-image bali-dest"></div>
                     <div class="card-content">
-                        <h3>Tokyo, Japan</h3>
-                        <p>Experience the perfect blend of tradition and modernity</p>
-                        <div class="price">From $899</div>
-                        <button class="book-btn">Book Now</button>
+                        <h3>🇮🇩 Bali, Indonesia</h3>
+                        <p>Cultural richness meets tropical beaches and luxury resorts</p>
+                        <div class="price">Hotels from $89/night</div>
+                        <button class="book-btn">Explore Deals</button>
                     </div>
                 </div>
                 <div class="destination-card">
-                    <div class="card-image bali"></div>
+                    <div class="card-image hawaii-dest"></div>
                     <div class="card-content">
-                        <h3>Bali, Indonesia</h3>
-                        <p>Tropical paradise with stunning beaches and rich culture</p>
-                        <div class="price">From $599</div>
-                        <button class="book-btn">Book Now</button>
+                        <h3>🇺🇸 Hawaii, USA</h3>
+                        <p>Volcanic landscapes, pristine beaches, and aloha spirit</p>
+                        <div class="price">Hotels from $149/night</div>
+                        <button class="book-btn">Explore Deals</button>
                     </div>
                 </div>
                 <div class="destination-card">
-                    <div class="card-image nyc"></div>
+                    <div class="card-image fiji-dest"></div>
                     <div class="card-content">
-                        <h3>New York, USA</h3>
-                        <p>The city that never sleeps, full of energy and possibilities</p>
-                        <div class="price">From $499</div>
-                        <button class="book-btn">Book Now</button>
+                        <h3>🇫🇯 Fiji</h3>
+                        <p>Pristine coral reefs and authentic island hospitality</p>
+                        <div class="price">Hotels from $229/night</div>
+                        <button class="book-btn">Explore Deals</button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>Why Choose Wanderlust?</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Secure Booking</h3>
-                    <p>Your personal and payment information is always protected</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-clock"></i>
-                    <h3>24/7 Support</h3>
-                    <p>Our travel experts are available around the clock to help you</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-dollar-sign"></i>
-                    <h3>Best Prices</h3>
-                    <p>We guarantee the best deals on flights and accommodations</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-globe"></i>
-                    <h3>Global Coverage</h3>
-                    <p>Book flights to over 1000 destinations worldwide</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Section -->
-    <section id="booking" class="booking-section">
-        <div class="container">
-            <h2>Book Your Trip</h2>
-            <div class="booking-tabs">
-                <button class="tab-btn active" data-tab="flights">Flights</button>
-                <button class="tab-btn" data-tab="hotels">Hotels</button>
-                <button class="tab-btn" data-tab="packages">Packages</button>
-            </div>
-            <div class="tab-content active" id="flights">
-                <form class="detailed-booking-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>From</label>
-                            <input type="text" placeholder="Departure city" required>
-                        </div>
-                        <div class="form-group">
-                            <label>To</label>
-                            <input type="text" placeholder="Destination" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Departure Date</label>
-                            <input type="date" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Return Date</label>
-                            <input type="date">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Passengers</label>
-                            <select required>
-                                <option value="">Select passengers</option>
-                                <option value="1">1 Adult</option>
-                                <option value="2">2 Adults</option>
-                                <option value="3">3 Adults</option>
-                                <option value="4">4+ Adults</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Class</label>
-                            <select required>
-                                <option value="">Select class</option>
-                                <option value="economy">Economy</option>
-                                <option value="business">Business</option>
-                                <option value="first">First Class</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="submit" class="submit-btn">Search Flights</button>
-                </form>
-            </div>
-            <div class="tab-content" id="hotels">
-                <form class="detailed-booking-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Destination</label>
-                            <input type="text" placeholder="Where are you going?" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Guests</label>
-                            <select required>
-                                <option value="">Select guests</option>
-                                <option value="1">1 Guest</option>
-                                <option value="2">2 Guests</option>
-                                <option value="3">3 Guests</option>
-                                <option value="4">4+ Guests</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Check-in</label>
-                            <input type="date" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Check-out</label>
-                            <input type="date" required>
-                        </div>
-                    </div>
-                    <button type="submit" class="submit-btn">Search Hotels</button>
-                </form>
-            </div>
-            <div class="tab-content" id="packages">
-                <form class="detailed-booking-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Destination</label>
-                            <input type="text" placeholder="Where would you like to go?" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Package Type</label>
-                            <select required>
-                                <option value="">Select package</option>
-                                <option value="adventure">Adventure</option>
-                                <option value="romantic">Romantic</option>
-                                <option value="family">Family</option>
-                                <option value="luxury">Luxury</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Duration</label>
-                            <select required>
-                                <option value="">Select duration</option>
-                                <option value="3">3 Days</option>
-                                <option value="7">1 Week</option>
-                                <option value="14">2 Weeks</option>
-                                <option value="21">3 Weeks</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Travelers</label>
-                            <select required>
-                                <option value="">Number of travelers</option>
-                                <option value="1">1 Person</option>
-                                <option value="2">2 People</option>
-                                <option value="3">3 People</option>
-                                <option value="4">4+ People</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="submit" class="submit-btn">Find Packages</button>
-                </form>
             </div>
         </div>
     </section>
@@ -285,11 +428,11 @@
     <!-- Newsletter -->
     <section class="newsletter">
         <div class="container">
-            <h2>Get Travel Deals & Updates</h2>
-            <p>Subscribe to receive exclusive offers and travel inspiration</p>
+            <h2>🏝️ Get Exclusive Island Deals</h2>
+            <p>Join our paradise club and receive secret hotel discounts and early access to flash sales</p>
             <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email address" required>
-                <button type="submit">Subscribe</button>
+                <input type="email" placeholder="Enter your email for exclusive deals" required>
+                <button type="submit">Join Paradise Club</button>
             </form>
         </div>
     </section>
@@ -300,46 +443,49 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <i class="fas fa-plane"></i>
-                        <span>Wanderlust</span>
+                        <i class="fas fa-umbrella-beach"></i>
+                        <span>TripQuest.cc</span>
                     </div>
-                    <p>Your trusted travel partner for unforgettable adventures around the world.</p>
+                    <p>Your gateway to exclusive hotel deals and unforgettable island getaways. Find paradise at unbeatable prices.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3>Hotel Categories</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#destinations">Destinations</a></li>
-                        <li><a href="#booking">Book Now</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Luxury Resorts</a></li>
+                        <li><a href="#">Boutique Hotels</a></li>
+                        <li><a href="#">All-Inclusive</a></li>
+                        <li><a href="#">Private Villas</a></li>
+                        <li><a href="#">Overwater Bungalows</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Support</h3>
                     <ul>
-                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="#">Best Price Guarantee</a></li>
+                        <li><a href="#">Booking Help</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
                         <li><a href="#">Travel Insurance</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Contact Info</h3>
+                    <h3>Paradise Hotline</h3>
                     <div class="contact-info">
-                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                        <p><i class="fas fa-envelope"></i> info@wanderlusttravel.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Adventure City</p>
+                        <p><i class="fas fa-phone"></i> +1 (800) TRIPQUEST</p>
+                        <p><i class="fas fa-envelope"></i> deals@tripquest.cc</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Available 24/7 from Paradise</p>
+                        <p><i class="fas fa-clock"></i> Island Time Support</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Wanderlust Travel. All rights reserved.</p>
+                <p>&copy; 2025 TripQuest.cc. All rights reserved. | Find your slice of paradise.</p>
             </div>
         </div>
     </footer>
