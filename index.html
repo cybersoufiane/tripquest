@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Travel - Book Your Dream Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-plane"></i>
+                <span>Wanderlust</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Book unforgettable travel experiences around the world</p>
+            <a href="#booking" class="cta-button">Start Your Journey</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Quick Booking Form -->
+    <section class="quick-booking">
+        <div class="container">
+            <div class="booking-form">
+                <div class="form-group">
+                    <label><i class="fas fa-map-marker-alt"></i> From</label>
+                    <input type="text" placeholder="Departure city">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-map-marker-alt"></i> To</label>
+                    <input type="text" placeholder="Destination">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-calendar"></i> Departure</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-calendar"></i> Return</label>
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Passengers</label>
+                    <select>
+                        <option>1 Adult</option>
+                        <option>2 Adults</option>
+                        <option>3 Adults</option>
+                        <option>4+ Adults</option>
+                    </select>
+                </div>
+                <button class="search-btn">
+                    <i class="fas fa-search"></i> Search Flights
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2>Popular Destinations</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <div class="card-image paris"></div>
+                    <div class="card-content">
+                        <h3>Paris, France</h3>
+                        <p>The City of Light awaits with iconic landmarks and romantic charm</p>
+                        <div class="price">From $699</div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="card-image tokyo"></div>
+                    <div class="card-content">
+                        <h3>Tokyo, Japan</h3>
+                        <p>Experience the perfect blend of tradition and modernity</p>
+                        <div class="price">From $899</div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="card-image bali"></div>
+                    <div class="card-content">
+                        <h3>Bali, Indonesia</h3>
+                        <p>Tropical paradise with stunning beaches and rich culture</p>
+                        <div class="price">From $599</div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="card-image nyc"></div>
+                    <div class="card-content">
+                        <h3>New York, USA</h3>
+                        <p>The city that never sleeps, full of energy and possibilities</p>
+                        <div class="price">From $499</div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Wanderlust?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Booking</h3>
+                    <p>Your personal and payment information is always protected</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our travel experts are available around the clock to help you</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Best Prices</h3>
+                    <p>We guarantee the best deals on flights and accommodations</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Coverage</h3>
+                    <p>Book flights to over 1000 destinations worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2>Book Your Trip</h2>
+            <div class="booking-tabs">
+                <button class="tab-btn active" data-tab="flights">Flights</button>
+                <button class="tab-btn" data-tab="hotels">Hotels</button>
+                <button class="tab-btn" data-tab="packages">Packages</button>
+            </div>
+            <div class="tab-content active" id="flights">
+                <form class="detailed-booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>From</label>
+                            <input type="text" placeholder="Departure city" required>
+                        </div>
+                        <div class="form-group">
+                            <label>To</label>
+                            <input type="text" placeholder="Destination" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Departure Date</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Return Date</label>
+                            <input type="date">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Passengers</label>
+                            <select required>
+                                <option value="">Select passengers</option>
+                                <option value="1">1 Adult</option>
+                                <option value="2">2 Adults</option>
+                                <option value="3">3 Adults</option>
+                                <option value="4">4+ Adults</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Class</label>
+                            <select required>
+                                <option value="">Select class</option>
+                                <option value="economy">Economy</option>
+                                <option value="business">Business</option>
+                                <option value="first">First Class</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Search Flights</button>
+                </form>
+            </div>
+            <div class="tab-content" id="hotels">
+                <form class="detailed-booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Destination</label>
+                            <input type="text" placeholder="Where are you going?" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Guests</label>
+                            <select required>
+                                <option value="">Select guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4+ Guests</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Check-in</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Check-out</label>
+                            <input type="date" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Search Hotels</button>
+                </form>
+            </div>
+            <div class="tab-content" id="packages">
+                <form class="detailed-booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Destination</label>
+                            <input type="text" placeholder="Where would you like to go?" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Package Type</label>
+                            <select required>
+                                <option value="">Select package</option>
+                                <option value="adventure">Adventure</option>
+                                <option value="romantic">Romantic</option>
+                                <option value="family">Family</option>
+                                <option value="luxury">Luxury</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Duration</label>
+                            <select required>
+                                <option value="">Select duration</option>
+                                <option value="3">3 Days</option>
+                                <option value="7">1 Week</option>
+                                <option value="14">2 Weeks</option>
+                                <option value="21">3 Weeks</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Travelers</label>
+                            <select required>
+                                <option value="">Number of travelers</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4+ People</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Find Packages</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Get Travel Deals & Updates</h2>
+            <p>Subscribe to receive exclusive offers and travel inspiration</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-plane"></i>
+                        <span>Wanderlust</span>
+                    </div>
+                    <p>Your trusted travel partner for unforgettable adventures around the world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#booking">Book Now</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="#">Travel Insurance</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@wanderlusttravel.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Adventure City</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wanderlust Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
