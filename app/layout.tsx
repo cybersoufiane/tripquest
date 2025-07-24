@@ -1,27 +1,31 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'RateFlip - Smart Hotel Rebooking',
+  title: 'TripQuest.cc - Smart Hotel Rebooking',
   description: 'Automatically rebook your hotel when prices drop. Save money on every trip.',
   keywords: 'hotel, booking, price drop, travel, savings, rebook',
-  authors: [{ name: 'RateFlip Team' }],
-  viewport: 'width=device-width, initial-scale=1',
+  authors: [{ name: 'TripQuest Team' }],
   robots: 'index, follow',
   openGraph: {
-    title: 'RateFlip - Smart Hotel Rebooking',
+    title: 'TripQuest.cc - Smart Hotel Rebooking',
     description: 'Automatically rebook your hotel when prices drop',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RateFlip - Smart Hotel Rebooking',
+    title: 'TripQuest.cc - Smart Hotel Rebooking',
     description: 'Automatically rebook your hotel when prices drop',
   },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
