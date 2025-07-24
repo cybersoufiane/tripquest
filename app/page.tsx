@@ -1,96 +1,138 @@
-import Header from './components/Header'
-import HeroSection from './components/HeroSection'
+/**
+ * File: page.tsx
+ * Path: app/page.tsx
+ * Description: Main homepage component for TripQuest. Includes hero section with hotel search,
+ *              features section, and testimonials. Focuses on travel savings without technical jargon.
+ */
+
+import Header from './components/ui/header'
+import HeroSection from './components/ui/hero-section'
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-warm-gradient">
       <Header />
       <HeroSection />
       
-      {/* Feature Preview Section */}
-      <section className="py-16 px-4 max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            How RateFlip Works
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our smart rebooking system monitors hotel prices 24/7 and automatically saves you money
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">🔍</span>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Search & Book</h3>
-            <p className="text-gray-600">
-              Book your hotel through our platform with refundable rates
+      {/* How It Works Section */}
+      <section id="how-it-works" className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-sage-800 mb-4">
+              How TripQuest Saves You Money
+            </h2>
+            <p className="text-xl text-sage-600 max-w-3xl mx-auto">
+              Our smart system works behind the scenes to ensure you always get the best hotel deals
             </p>
           </div>
-          
-          <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
-            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">📊</span>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl mb-6 shadow-warm">
+                <span className="text-2xl font-bold text-white">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-sage-800 mb-4">Book Your Hotel</h3>
+              <p className="text-sage-600">
+                Search and book your hotel through our platform. We'll track your reservation automatically.
+              </p>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Price Monitoring</h3>
-            <p className="text-gray-600">
-              We continuously monitor prices across multiple booking platforms
-            </p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-xl shadow-sm border border-gray-100">
-            <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">💰</span>
+
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-ocean-500 to-ocean-600 rounded-2xl mb-6 shadow-ocean">
+                <span className="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-sage-800 mb-4">We Monitor Prices</h3>
+              <p className="text-sage-600">
+                Our system continuously checks for price drops on your exact room and dates, 24/7.
+              </p>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Auto Rebook</h3>
-            <p className="text-gray-600">
-              When prices drop, we automatically cancel and rebook at the lower rate
-            </p>
-          </div>
-        </div>
-      </section>
-      
-      {/* Status Section */}
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Development Status
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold text-green-600 mb-2">✅ Completed</h3>
-              <ul className="text-left text-gray-600 space-y-1">
-                <li>• Next.js web application setup</li>
-                <li>• Responsive design foundation</li>
-                <li>• Google Cloud deployment ready</li>
-                <li>• TypeScript configuration</li>
-              </ul>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold text-blue-600 mb-2">🚧 Coming Soon</h3>
-              <ul className="text-left text-gray-600 space-y-1">
-                <li>• Booking.com API integration</li>
-                <li>• User authentication system</li>
-                <li>• Price monitoring engine</li>
-                <li>• Automatic rebooking feature</li>
-              </ul>
+
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-warm-500 to-warm-600 rounded-2xl mb-6 shadow-warm">
+                <span className="text-2xl font-bold text-white">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-sage-800 mb-4">Automatic Savings</h3>
+              <p className="text-sage-600">
+                When prices drop, we automatically rebook you at the lower rate and refund the difference.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      
-      {/* Footer */}
-      <footer className="py-8 px-4 bg-gray-900 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-gray-400">
-            © 2024 RateFlip. Built with Next.js, deployed on Google Cloud.
-          </p>
-          <p className="text-sm text-gray-500 mt-2">
-            Version 0.1.0 - Hello World Deployment
-          </p>
+
+      {/* Savings Section */}
+      <section id="savings" className="py-20 px-4 bg-gradient-to-br from-cream-50 to-ocean-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-sage-800 mb-4">
+              Real Savings from Real Travelers
+            </h2>
+            <p className="text-xl text-sage-600">
+              Join thousands who are already saving on their hotel stays
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white rounded-2xl p-6 shadow-soft border border-cream-200">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary-600 mb-2">$187</div>
+                <div className="text-sm text-sage-600 mb-4">Saved on Paris trip</div>
+                <div className="text-xs text-sage-500">"Found a lower rate 3 days before check-in!"</div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-soft border border-cream-200">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-ocean-600 mb-2">$412</div>
+                <div className="text-sm text-sage-600 mb-4">Saved on NYC weekend</div>
+                <div className="text-xs text-sage-500">"Automatic rebooking saved our vacation budget!"</div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-soft border border-cream-200">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-warm-600 mb-2">$95</div>
+                <div className="text-sm text-sage-600 mb-4">Saved on Miami beach</div>
+                <div className="text-xs text-sage-500">"So easy, I didn't have to do anything!"</div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-soft border border-cream-200">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-sage-600 mb-2">$289</div>
+                <div className="text-sm text-sage-600 mb-4">Saved on Vegas show</div>
+                <div className="text-xs text-sage-500">"More money for entertainment!"</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <button className="bg-gradient-to-r from-primary-500 to-ocean-500 hover:from-primary-600 hover:to-ocean-600 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-200 shadow-warm hover:shadow-glow transform hover:scale-105">
+              Start Saving Today
+            </button>
+          </div>
         </div>
-      </footer>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-primary-600 to-ocean-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Never Overpay Again?
+          </h2>
+          <p className="text-xl text-primary-100 mb-8">
+            Join smart travelers who save automatically on every hotel booking
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white hover:bg-cream-50 text-primary-600 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-200 shadow-soft hover:shadow-warm transform hover:scale-105">
+              Get Started Free
+            </button>
+            <button className="border-2 border-white hover:bg-white/10 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-200">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

@@ -1,105 +1,149 @@
+/**
+ * File: globals.css
+ * Path: app/globals.css
+ * Description: Global CSS styles for TripQuest application. Includes Tailwind base,
+ *              custom scrollbar styling, and smooth animations for better UX.
+ */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-
-/* Smooth focus transitions */
 @layer base {
   * {
-    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
-  }
-  
-  html {
-    scroll-behavior: smooth;
+    @apply border-cream-200;
   }
   
   body {
-    @apply text-gray-900 bg-white;
+    @apply bg-cream-50 text-sage-800;
+  }
+
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-cream-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-sage-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-sage-400;
+  }
+
+  /* Smooth focus transitions */
+  input:focus,
+  select:focus,
+  button:focus {
+    @apply outline-none;
+  }
+
+  /* Custom selection colors */
+  ::selection {
+    @apply bg-primary-200 text-primary-900;
+  }
+
+  ::-moz-selection {
+    @apply bg-primary-200 text-primary-900;
   }
 }
 
-/* Custom utilities */
+@layer components {
+  /* Custom button variants */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-ocean-500 hover:from-primary-600 hover:to-ocean-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-200 shadow-warm hover:shadow-glow transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-sage-300 hover:border-primary-500 text-sage-700 hover:text-primary-600 px-6 py-3 rounded-xl font-semibold transition-all duration-200 bg-white hover:bg-primary-50;
+  }
+
+  /* Custom card styles */
+  .card {
+    @apply bg-white rounded-2xl shadow-soft border border-cream-200 transition-all duration-300 hover:shadow-warm;
+  }
+
+  .card-hover {
+    @apply transform hover:-translate-y-1 hover:shadow-warm;
+  }
+
+  /* Custom input styles */
+  .input-field {
+    @apply w-full px-4 py-3 border border-cream-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all duration-200 text-sage-800 placeholder-sage-400 bg-white;
+  }
+
+  /* Loading animation */
+  .loading-dots {
+    @apply inline-flex space-x-1;
+  }
+
+  .loading-dots span {
+    @apply w-2 h-2 bg-current rounded-full animate-pulse;
+  }
+
+  .loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+}
+
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* Custom utilities */
+  .bg-warm-gradient {
+    background: linear-gradient(135deg, #f5e6d3 0%, #fef7f0 50%, #e3f2fd 100%);
   }
-  
-  .glass {
-    @apply bg-white/80 backdrop-blur-md border border-white/20;
+
+  .bg-hero-gradient {
+    background: linear-gradient(135deg, #7cb342 0%, #2196f3 100%);
   }
-  
+
+  .bg-search-gradient {
+    background: linear-gradient(45deg, #ff7043 0%, #7cb342 100%);
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Animation delays */
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animate-delay-700 {
+    animation-delay: 700ms;
+  }
+
+  /* Backdrop blur utilities */
+  .backdrop-blur-warm {
+    backdrop-filter: blur(8px) saturate(180%);
+  }
+
+  /* Custom gradient text */
   .gradient-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary-500 via-ocean-500 to-warm-500;
   }
-  
-  .shadow-glow {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-  }
-  
-  .touch-friendly {
-    @apply min-h-[44px] min-w-[44px];
-  }
-}
-
-/* Animation improvements for mobile */
-@media (prefers-reduced-motion: reduce) {
-  .animate-fade-in,
-  .animate-slide-up {
-    animation: none;
-  }
-}
-
-/* Mobile-specific optimizations */
-@media (max-width: 768px) {
-  .hero-text {
-    @apply text-3xl leading-tight;
-  }
-  
-  .stat-card {
-    @apply py-4 px-4;
-  }
-}
-
-/* Loading states */
-.loading-shimmer {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-/* Future mobile app preparation */
-.mobile-ready {
-  @apply touch-manipulation select-none;
-}
-
-.tap-highlight-none {
-  -webkit-tap-highlight-color: transparent;
 }

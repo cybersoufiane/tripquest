@@ -1,8 +1,14 @@
+/**
+ * File: next.config.js
+ * Path: next.config.js
+ * Description: Next.js configuration for TripQuest application with proper image
+ *              handling and standalone output for Docker deployment.
+ */
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
   images: {
-    domains: ['cf.bstatic.com'], // For Booking.com images in the future
     remotePatterns: [
       {
         protocol: 'https',
@@ -10,10 +16,14 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cf.bstatic.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
-  // Remove the problematic env section - Next.js handles NODE_ENV automatically
-  // Remove experimental.appDir - it's now stable and default in Next.js 14+
 }
 
 module.exports = nextConfig
